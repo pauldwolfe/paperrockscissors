@@ -1,0 +1,7 @@
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.deps.json
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.runtimeconfig.json
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.pdb
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.Services.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/bin/Release/net5.0/publish/RPS.Services.pdb

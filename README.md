@@ -23,4 +23,19 @@ It's intentionally not an algorithmically complex problem, so we're looking more
 * Write some unit tests for the key pieces of logic. 
 * Don't go overboard, this should only take a few hours.
 
+## Running the app
+
+The app was built with .Net Core, so the SDK is required to run the app.
+* Install the [5.0 SDK](https://dotnet.microsoft.com/download)
+* To run the app (from /src/RPS.CLI/bin/Release/net5.0/publish): `dotnet RPS.dll`
+* ...or from /srs/RPS.CLI `dotnet run`
+
+## Source projects
+
+* /src/RPS.CLI: main console app
+* /src/RPS.Services: service layer library
+* /tests: test project
+
+### Running tests
+* dotnet test tests/tests/csproj
 

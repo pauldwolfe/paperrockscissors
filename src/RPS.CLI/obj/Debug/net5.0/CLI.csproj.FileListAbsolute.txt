@@ -1,0 +1,16 @@
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI.deps.json
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI.runtimeconfig.json
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI.runtimeconfig.dev.json
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/ref/CLI.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/bin/Debug/net5.0/CLI.pdb
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.csprojAssemblyReference.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.GeneratedMSBuildEditorConfig.editorconfig
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.AssemblyInfoInputs.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.AssemblyInfo.cs
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.csproj.CoreCompileInputs.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/ref/CLI.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.pdb
+/home/pete/code/rockpaperscissors/paperrockscissors/CLI/obj/Debug/net5.0/CLI.genruntimeconfig.cache

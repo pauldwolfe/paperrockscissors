@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "RPS.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/RPS.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/RPS.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RPS.Services/1.0.0": {
+      "type": "project",
+      "path": "../RPS.Services/RPS.Services.csproj",
+      "msbuildProject": "../RPS.Services/RPS.Services.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "RPS.Services >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/pete/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj",
+      "projectName": "RPS",
+      "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj",
+      "packagesPath": "/home/pete/.nuget/packages/",
+      "outputPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/pete/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj": {
+              "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/120/sdk/5.0.202/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj": {}
+    "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.CLI/RPS.csproj": {}
   },
   "projects": {
-    "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj": {
+    "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.CLI/RPS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj",
+        "projectUniqueName": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.CLI/RPS.csproj",
         "projectName": "RPS",
-        "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/RPS.csproj",
+        "projectPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.CLI/RPS.csproj",
         "packagesPath": "/home/pete/.nuget/packages/",
-        "outputPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.CLI/obj/",
+        "outputPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.CLI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pete/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj": {
-                "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj"
+              "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj": {
+                "projectPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj"
               }
             }
           }
@@ -60,14 +60,14 @@
         }
       }
     },
-    "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj": {
+    "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
+        "projectUniqueName": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
         "projectName": "RPS.Services",
-        "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
+        "projectPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
         "packagesPath": "/home/pete/.nuget/packages/",
-        "outputPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/",
+        "outputPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/pete/.nuget/NuGet/NuGet.Config"

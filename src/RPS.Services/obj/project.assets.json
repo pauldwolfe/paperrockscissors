@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
+      "projectUniqueName": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
       "projectName": "RPS.Services",
-      "projectPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
+      "projectPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
       "packagesPath": "/home/pete/.nuget/packages/",
-      "outputPath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/",
+      "outputPath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/pete/.nuget/NuGet/NuGet.Config"

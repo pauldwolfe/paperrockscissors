@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6+A/Hfb/LYZ9S80MTqzPqC1axAr/bHwGhyxISvnjtBMRec9FlMOG9UvQt/Ir5vp3JiibU/3U9uxULM6Jlive6g==",
+  "dgSpecHash": "T2FpMe6tK3tfN6TNquHsFw/0LKDMELgZ2emQz2yiQml4S5MjvmC92Mvkw0P90bWDNDKaWWxRrzJzHY682KRjRA==",
   "success": true,
-  "projectFilePath": "/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
+  "projectFilePath": "/home/pete/code/rps-wolfe/paperrockscissors/src/RPS.Services/RPS.Services.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

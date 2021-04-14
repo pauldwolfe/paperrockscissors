@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "RPS/1.0.0": {
+        "dependencies": {
+          "RPS.Services": "1.0.0"
+        },
+        "runtime": {
+          "RPS.dll": {}
+        }
+      },
+      "RPS.Services/1.0.0": {
+        "runtime": {
+          "RPS.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RPS/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "RPS.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

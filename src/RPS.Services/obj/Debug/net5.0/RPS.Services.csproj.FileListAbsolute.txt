@@ -1,0 +1,12 @@
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/bin/Debug/net5.0/RPS.Services.deps.json
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/bin/Debug/net5.0/RPS.Services.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/bin/Debug/net5.0/ref/RPS.Services.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/bin/Debug/net5.0/RPS.Services.pdb
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.csprojAssemblyReference.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.GeneratedMSBuildEditorConfig.editorconfig
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.AssemblyInfoInputs.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.AssemblyInfo.cs
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.csproj.CoreCompileInputs.cache
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/ref/RPS.Services.dll
+/home/pete/code/rockpaperscissors/paperrockscissors/src/RPS.Services/obj/Debug/net5.0/RPS.Services.pdb

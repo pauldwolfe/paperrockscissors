@@ -16,9 +16,9 @@ fun main() {
     )
 
     val playerFactory = PlayerFactory()
-    val p1 = playerFactory.createPlayer(true)
-    val p2 = playerFactory.createPlayer(false)
-    val game = Game(p1, p2, actions)
+    val humanPlayer = playerFactory.createPlayer(true)
+    val computerPlayer = playerFactory.createPlayer(false)
+    val game = Game(humanPlayer, computerPlayer, actions)
 
     game.play()
 }

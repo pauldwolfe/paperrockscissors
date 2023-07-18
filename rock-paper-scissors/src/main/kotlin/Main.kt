@@ -2,6 +2,7 @@ import rps.project.*
 
 fun main() {
     println("Welcome to Rock Paper Scissors")
+    println("Coding exercise - Evan Meikleham\n")
 
     // If you want to extend the game with more moves, it can be done here by defining Actions
     // and the Actions that they beat. As currently implemented, two distinct actions cannot create

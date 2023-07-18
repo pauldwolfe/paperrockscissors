@@ -16,9 +16,6 @@ class Game(private val p1: Player, private val p2: Player, actions: Set<Action>)
     private val emptyAction = Action(null, setOf())
 
     private var pipeline = { _: PlayerName, _: Action -> Triple(PlayerName.PLAYER1, emptyAction, Record(0,0,0)) }
-    private var lastPlayer: PlayerName = PlayerName.PLAYER2
-    private var lastAction: Action = emptyAction
-
 
     private fun appendNewActionToPipeline(action: Action, callback: (Action, Action, Outcome) -> Unit) {
         val curriedFunction = { currentPlayer: PlayerName, lastAction: Action -> processAction(currentPlayer, lastAction, action, callback) }
@@ -28,15 +25,15 @@ class Game(private val p1: Player, private val p2: Player, actions: Set<Action>)
     // If we're running asynchronously, this will run the pipeline to completion (for example, if the user decides to stop
     // and get the final count of wins and losses).
     private fun getResultFromPipeline(): Record {
-        val res = this.pipeline(this.lastPlayer, this.lastAction)
+        val res = this.pipeline(PlayerName.PLAYER2, emptyAction)
         this.pipeline = { _: PlayerName, _: Action -> res }
         return res.third
     }
 
     fun play() {
         // These callbacks could be asynchronous, for example, if it's updating a UI in a browser without blocking, or if Player 2 is human but remote
-        val p1callback = { _: Action, a1: Action, _: Outcome -> println(a1.name) }
-        val p2callback = { a1: Action, a2: Action, oc: Outcome -> println("P1: ${a1.name}, P2: ${a2.name}, Outcome: ${oc.name}") }
+        val p1callback = { _: Action, a1: Action, _: Outcome -> println("You chose ${a1.name}") }
+        val p2callback = { a1: Action, a2: Action, oc: Outcome -> println("Your opponent chose ${a2.name}.\nP1: ${a1.name}, P2: ${a2.name}, Outcome: ${oc.name}\n") }
 
         while (true) {
             val p1move = p1.getMove(true)

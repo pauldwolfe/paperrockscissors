@@ -13,6 +13,7 @@ class HumanPlayer : Player {
         val msg = if (allowQuit) "R = rock, P = paper, S = scissors, Q = quit" else "R = rock, P = paper, S = scissors"
 
         while(true) {
+            println("Please choose your move.")
             println(msg)
             val input = reader.nextLine()
             if (input.equals("R", true)) { return MoveName.ROCK }

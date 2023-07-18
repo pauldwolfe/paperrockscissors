@@ -22,6 +22,16 @@ A `PlayerFactory` determines whether a player is a Human Player or a Computer `P
 
 The `Record` type is a simple triple of values: (`wins`, `losses`, `ties`), but you may notice that each round's output is encoded as a `Record` to be incremented, for example, a `LOSS` will return a record (0,1,0). This allow the pipeline to string together many `Action`s asynchronously, as the increments can be added on a specific thread, and only needs to be added to the "true" record when everything needs to be reconciled (for example, when a player quits). In technical terms, this turns the set of actions into a State Monad over the set of `Record`s. In practical terms, this means that the `Action`s can be processed asynchronously without ever needing to lock the running total `Record`. It also makes sure that the pipeline only processes a sequence of pure functions, without side-effects. 
 
+### Game
+
+With the above design decisions, the `Game` class was designed using functional programming logic. The only "state" is encoded in the `pipeline` function, which...
+- Is composed with `Action`s (following some manipulation and currying) to form a new function with the same signature
+- Runs to completion
+- Is replaced with a new function with the same signature that looks like `(_) -> (CurrentValues, InputsToNextAction)`.
+- Repeats the above steps until the user decides to quits, at which point the pipeline runs to completion, and the `CurrentValues` become the final values.
+
+In this way, the pipeline function itself encodes the values, which do not live within the scope of `Game` until `Game` runs the pipeline and retrieves the final values. The technical term for this is a Kleisli Arrow pattern, and it allows for easier translation into an asynchronous version.
+
 ## Testing
 
 I was not familiar with Kotlin before doing this exercise, so I used the simplest setup in IntelliJ IDEA to run unit tests on the low-level components, and all pure functions have been automatically tested. A stretch goal would be to set up unit tests to automatically mock user inputs. However, given the time frame and the scope of the project, I decided to test the user inputs manually.

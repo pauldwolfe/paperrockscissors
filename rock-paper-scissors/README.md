@@ -28,7 +28,7 @@ With the above design decisions, the `Game` class was designed using functional 
 - Is composed with `Action`s (following some manipulation and currying) to form a new function with the same signature
 - Runs to completion
 - Is replaced with a new function with the same signature that looks like `(_) -> (CurrentValues, InputsToNextAction)`.
-- Repeats the above steps until the user decides to quits, at which point the pipeline runs to completion, and the `CurrentValues` become the final values.
+- Repeats the above steps until the user decides to quit, at which point the pipeline runs to completion, and the `CurrentValues` become the final values.
 
 In this way, the pipeline function itself encodes the values, which do not live within the scope of `Game` until `Game` runs the pipeline and retrieves the final values. The technical term for this is a Kleisli Arrow pattern, and it allows for easier translation into an asynchronous version.
 

@@ -62,9 +62,9 @@ class ActionTest {
         assertEquals(test3, Outcome.WIN, "Rock > paper in the modified game")
         assertEquals(test4, Outcome.UNDEFINED, "Rock > Scissors and Scissors > Rock, so no defined winner")
         assertEquals(test5, Outcome.TIE, "An action always ties itself, regardless of the dictionary")
-        assertEquals(test6, Outcome.UNDEFINED, "Paper > !Scissors and Scissors !> Paper, so no defined winner")
+        assertEquals(test6, Outcome.UNDEFINED, "Paper !> Scissors and Scissors !> Paper, so no defined winner")
         assertEquals(test7, Outcome.LOSS, "Rock > paper in the modified game")
-        assertEquals(test8, Outcome.UNDEFINED, "Paper > !Scissors and Scissors !> Paper, so no defined winner")
+        assertEquals(test8, Outcome.UNDEFINED, "Paper !> Scissors and Scissors !> Paper, so no defined winner")
         assertEquals(test9, Outcome.TIE, "An action always ties itself, regardless of the dictionary")
     }
 

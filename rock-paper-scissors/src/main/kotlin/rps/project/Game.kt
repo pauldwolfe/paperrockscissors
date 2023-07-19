@@ -31,6 +31,7 @@ class Game(private val p1: Player, private val p2: Player, actions: Set<Action>)
     }
 
     fun play() {
+        // p1callback is run after the pipeline processes PLAYER1's Action, and likewise p2callback for PLAYER2.
         // These callbacks could be asynchronous, for example, if it's updating a UI in a browser without blocking, or if Player 2 is human but remote
         val p1callback = { _: Action, a1: Action, _: Outcome -> println("You chose ${a1.name}") }
         val p2callback = { a1: Action, a2: Action, oc: Outcome -> println("Your opponent chose ${a2.name}.\nP1: ${a1.name}, P2: ${a2.name}, Outcome: ${oc.name}\n") }

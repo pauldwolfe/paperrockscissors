@@ -2,9 +2,6 @@ package rps.project
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
-import rps.project.Outcome
-import rps.project.Record
-import rps.project.outcomeToRecord
 
 class RecordTest {
     @Test
@@ -31,11 +28,11 @@ class RecordTest {
         val lossRecord = Record(0,1,0)
         val tieRecord = Record(0,0,1)
         val otherRecord = Record(0, 0, 0)
-        Assertions.assertTrue(outcomeToRecord(Outcome.WIN).equals(winRecord), "A win is coded (1,0,0)")
-        Assertions.assertTrue(outcomeToRecord(Outcome.LOSS).equals(lossRecord), "A loss is coded (0,1,0)")
-        Assertions.assertTrue(outcomeToRecord(Outcome.TIE).equals(tieRecord), "A tie is coded (0,0,1)")
-        Assertions.assertTrue(outcomeToRecord(Outcome.UNDEFINED).equals(otherRecord), "Undefined is coded (0,0,0)")
-        Assertions.assertTrue(outcomeToRecord(Outcome.WAITING).equals(otherRecord), "Waiting is coded (0,0,1)")
+        Assertions.assertTrue(Record.outcomeToRecord(Outcome.WIN).equals(winRecord), "A win is coded (1,0,0)")
+        Assertions.assertTrue(Record.outcomeToRecord(Outcome.LOSS).equals(lossRecord), "A loss is coded (0,1,0)")
+        Assertions.assertTrue(Record.outcomeToRecord(Outcome.TIE).equals(tieRecord), "A tie is coded (0,0,1)")
+        Assertions.assertTrue(Record.outcomeToRecord(Outcome.UNDEFINED).equals(otherRecord), "Undefined is coded (0,0,0)")
+        Assertions.assertTrue(Record.outcomeToRecord(Outcome.WAITING).equals(otherRecord), "Waiting is coded (0,0,1)")
     }
 
     @Test

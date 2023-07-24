@@ -8,16 +8,6 @@ enum class Outcome {
     WIN, LOSS, TIE, UNDEFINED, WAITING
 }
 
-// Encoding this way so that we can use the State monad pattern
-fun outcomeToRecord(outcome: Outcome): Record {
-    return when(outcome) {
-        Outcome.WIN -> Record(1, 0, 0)
-        Outcome.LOSS -> Record(0, 1, 0)
-        Outcome.TIE -> Record(0, 0, 1)
-        else -> Record(0, 0, 0)
-    }
-}
-
 class Record (private val wins: Int, private val losses: Int, private val ties: Int) {
     fun increment(by: Record): Record {
         return Record(this.wins + by.wins, this.losses + by.losses, this.ties + by.ties)
@@ -29,5 +19,18 @@ class Record (private val wins: Int, private val losses: Int, private val ties: 
 
     override fun toString(): String {
         return "Wins: ${this.wins}, Losses: ${this.losses}, Ties: ${this.ties}"
+    }
+
+    companion object {
+        @JvmStatic
+        // Encoding this way so that we can use the State monad pattern
+        fun outcomeToRecord(outcome: Outcome): Record {
+            return when(outcome) {
+                Outcome.WIN -> Record(1, 0, 0)
+                Outcome.LOSS -> Record(0, 1, 0)
+                Outcome.TIE -> Record(0, 0, 1)
+                else -> Record(0, 0, 0)
+            }
+        }
     }
 }

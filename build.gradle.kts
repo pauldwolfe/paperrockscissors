@@ -5,7 +5,7 @@ plugins {
     application
 }
 
-group = "org.example"
+group = "com.hartwig.paperrockscissors"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -30,6 +30,10 @@ kotlin {
     jvmToolchain(8)
 }
 
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
+}
+
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.hartwig.paperrockscissors.MainKt")
 }

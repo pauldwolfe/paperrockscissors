@@ -28,7 +28,7 @@ tasks.withType<KotlinCompile> {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("net.gered.paperrockscissors.MainKt")
 }
 
 tasks.jar {
@@ -39,4 +39,12 @@ tasks.jar {
 
 tasks.named<ShadowJar>("shadowJar") {
     archiveClassifier.set("uberjar")
+}
+
+// prevents an kotlin.io.ReadAfterEOFException from being thrown when readln() is called only when running the
+// application via `gradle run` ... i would assume the problem is the overly-fancified console output stuff that
+// gradle does during execution interfering with normal stdin functionality? what fun!
+// (note that even with this hacky fix, when running via `gradle run`, the output is kinda messy ...)
+tasks.named<JavaExec>("run") {
+    standardInput = System.`in`
 }

@@ -14,6 +14,19 @@ enum class PlayerInput {
     QUIT,
     INVALID;
 
+    /**
+     * Tries to convert the player input to a [Choice], or returns null if the player input does not represent one of
+     * the possible match choices.
+     */
+    fun toChoice(): Choice? {
+        return when (this) {
+            ROCK -> Choice.ROCK
+            PAPER -> Choice.PAPER
+            SCISSORS -> Choice.SCISSORS
+            else -> null
+        }
+    }
+
     companion object {
         fun fromString(input: String) : PlayerInput {
             return when (input.lowercase().trim()) {
@@ -34,9 +47,14 @@ fun runGameLoop(matches: Matches) {
         logger.debug("Parsed player input: {}", input)
         when (input) {
             PlayerInput.QUIT -> break
-            PlayerInput.INVALID -> println("I didn't understand that, please try again.")
             else -> {
-                // todo
+
+                val choice = input.toChoice()
+                if (choice == null) {
+                    println("I didn't understand that, please try again.")
+                } else {
+                    println("Your choice: $choice")
+                }
             }
         }
     }

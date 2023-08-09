@@ -2,6 +2,7 @@ package net.gered.paperrockscissors
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 internal class GameLoopTest {
     @Test
@@ -17,5 +18,14 @@ internal class GameLoopTest {
 
         assertEquals(PlayerInput.INVALID, PlayerInput.fromString(""))
         assertEquals(PlayerInput.INVALID, PlayerInput.fromString("foobar"))
+    }
+
+    @Test
+    fun testPlayerInputConversionToChoice() {
+        assertEquals(Choice.ROCK, PlayerInput.ROCK.toChoice())
+        assertEquals(Choice.PAPER, PlayerInput.PAPER.toChoice())
+        assertEquals(Choice.SCISSORS, PlayerInput.SCISSORS.toChoice())
+        assertNull(PlayerInput.QUIT.toChoice())
+        assertNull(PlayerInput.INVALID.toChoice())
     }
 }

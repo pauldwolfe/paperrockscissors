@@ -1,5 +1,9 @@
 package net.gered.paperrockscissors
 
+import org.slf4j.LoggerFactory
+
+private val logger = LoggerFactory.getLogger("GameLoop")
+
 /**
  * Parsed player input from what was typed in during the main game loop prompt.
  */
@@ -24,5 +28,16 @@ enum class PlayerInput {
 }
 
 fun runGameLoop(matches: Matches) {
-    TODO()
+    while (true) {
+        println("Make your choice! (type 'rock', 'paper' or 'scissors'. type 'quit' to stop playing)")
+        val input = PlayerInput.fromString(readln())
+        logger.debug("Parsed player input: {}", input)
+        when (input) {
+            PlayerInput.QUIT -> break
+            PlayerInput.INVALID -> println("I didn't understand that, please try again.")
+            else -> {
+                // todo
+            }
+        }
+    }
 }

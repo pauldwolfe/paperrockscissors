@@ -48,12 +48,20 @@ fun runGameLoop(matches: Matches) {
         when (input) {
             PlayerInput.QUIT -> break
             else -> {
-
-                val choice = input.toChoice()
-                if (choice == null) {
+                val playerChoice = input.toChoice()
+                if (playerChoice == null) {
                     println("I didn't understand that, please try again.")
                 } else {
-                    println("Your choice: $choice")
+                    println("Your choice: $playerChoice")
+                    val match = playMatch(playerChoice)
+                    println("I chose ${match.computer}!")
+
+                    when (match.result) {
+                        Result.LEFT -> println("You win!")
+                        Result.RIGHT -> println("I win!")
+                        Result.TIE -> println("It's a tie!")
+                    }
+                    matches.record(match)
                 }
             }
         }

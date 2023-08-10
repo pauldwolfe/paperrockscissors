@@ -2,6 +2,8 @@ package net.gered.paperrockscissors
 
 import org.slf4j.LoggerFactory
 
+private val logger = LoggerFactory.getLogger("Match")
+
 // TODO: perhaps using "yes/no/tie" values instead would be more descriptive / intuitive ... ?
 /**
  * The winning side of a played match.
@@ -55,10 +57,30 @@ enum class Choice {
     abstract fun beats(right: Choice): Result
 }
 
-class Matches {
-    companion object {
-        private val logger = LoggerFactory.getLogger(Matches::class.java)
-    }
+/**
+ * Contains the properties of a single match including the result.
+ */
+data class Match(val player: Choice, val computer: Choice, val result: Result)
+
+/**
+ * "Plays" a match given the player's choice. The computer's choice is randomly decided during execution of this
+ * function.
+ *
+ * @param playerChoice the player's choice for the match
+ *
+ * @return [Match] the details of the match, including what the computer chose and who won
+ */
+fun playMatch(playerChoice: Choice) : Match {
+    val computerChoice = Choice.values().random()
+    val result = playerChoice.beats(computerChoice)
+    logger.debug(
+        "Match played with player {} against computer {} with result {}",
+        playerChoice,
+        computerChoice,
+        result
+    )
+    return Match(playerChoice, computerChoice, result)
+}
 
     var wins = 0
         private set
@@ -69,31 +91,22 @@ class Matches {
 
     val total get() = wins + losses + ties
 
-    fun playMatch(playerChoice: Choice): Result {
-        val computerChoice = Choice.values().random()
-        val result = playerChoice.beats(computerChoice)
-        logger.debug(
-            "Match played with player {} against computer {} with result {}",
-            playerChoice,
-            computerChoice,
-            result
-        )
-        when (result) {
+    fun record(match: Match) {
+        when (match.result) {
             Result.LEFT -> {
-                logger.debug("Recording player win for match result {}", result)
+                logger.debug("Recording player win for match result {}", match.result)
                 wins += 1
             }
 
             Result.RIGHT -> {
-                logger.debug("Recording player loss for match result {}", result)
+                logger.debug("Recording player loss for match result {}", match.result)
                 losses += 1
             }
 
             Result.TIE -> {
-                logger.debug("Recording tie for match result {}", result)
+                logger.debug("Recording tie for match result {}", match.result)
                 ties += 1
             }
         }
-        return result
     }
 }

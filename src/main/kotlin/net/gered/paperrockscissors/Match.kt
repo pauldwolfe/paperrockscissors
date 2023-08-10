@@ -82,15 +82,38 @@ fun playMatch(playerChoice: Choice) : Match {
     return Match(playerChoice, computerChoice, result)
 }
 
+/**
+ * Contains a running tally of the matches played in a single session, recorded from the perspective of the player.
+ */
+class Matches {
+    /**
+     * The number of matches the player has won.
+     */
     var wins = 0
         private set
+
+    /**
+     * The number of matches the player has lost.
+     */
     var losses = 0
         private set
+
+    /**
+     * The number of matches that have tied.
+     */
     var ties = 0
         private set
 
+    /**
+     * The total number of matches played in this session.
+     */
     val total get() = wins + losses + ties
 
+    /**
+     * Records the results of the given match.
+     *
+     * @param match the match to be recorded
+     */
     fun record(match: Match) {
         when (match.result) {
             Result.LEFT -> {

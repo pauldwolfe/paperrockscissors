@@ -42,9 +42,13 @@ enum class PlayerInput {
 
 fun runGameLoop(matches: Matches) {
     while (true) {
+        val matchNum = matches.total + 1
+        println("\nMatch #$matchNum")
+
         println("Make your choice! (type 'rock', 'paper' or 'scissors'. type 'quit' to stop playing)")
         val input = PlayerInput.fromString(readln())
         logger.debug("Parsed player input: {}", input)
+
         when (input) {
             PlayerInput.QUIT -> break
             else -> {
@@ -57,8 +61,8 @@ fun runGameLoop(matches: Matches) {
                     println("I chose ${match.computer}!")
 
                     when (match.result) {
-                        Result.LEFT -> println("You win!")
-                        Result.RIGHT -> println("I win!")
+                        Result.LEFT -> println("${match.player} beats ${match.computer}! You win!")
+                        Result.RIGHT -> println("${match.computer} beats ${match.player}! I win!")
                         Result.TIE -> println("It's a tie!")
                     }
                     matches.record(match)

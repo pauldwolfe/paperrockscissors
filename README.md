@@ -13,7 +13,7 @@ It's intentionally not an algorithmically complex problem, so we're looking more
   - Rock beats Scissors
   - Scissors beats Paper. 
   - The same input is a tie. 
-* The game will repeat until the user explictly chooses to exit.
+* The game will repeat until the user explicitly chooses to exit.
 * On exit a summary is displayed of games won, lost, and tied.
 
 ## Non-Functional Requirements
@@ -22,5 +22,23 @@ It's intentionally not an algorithmically complex problem, so we're looking more
 * Write your code to the same standard you would professionally (object structure, design patterns, readability, testing/testability, extensibility)
 * Write some unit tests for the key pieces of logic. 
 * Don't go overboard, this should only take a few hours.
+
+## How to run the application with Docker
+Please make sure Docker is installed on your machine.
+
+Then run below command to build the Docker image:
+
+```
+docker build --no-cache -t paper-rock-scissors .
+```
+
+Then run the Docker image with below command:
+
+```
+docker run --rm -it paper-rock-scissors:latest
+```
+
+The application will run with Spring Boot and game starts on startup. 
+Then Spring context will shut down gracefully.
 
 

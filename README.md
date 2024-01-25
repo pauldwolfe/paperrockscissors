@@ -17,6 +17,11 @@ Once you have Go installed and correctly configured, open a terminal/console in 
 
 To run the tests make sure in your terminal/console you are in the tests folder and type `go test . -v`
 
+### PLaying the game
+First input your username
+After this the gameloop starts in which you will have a choice of `rock`, `paper` or `scissors`.
+This will go on untill you either close the cli or you can type `exit` and it will exit the game
+
 ## The algorithm for calculating the winner
 To calculate the winner which seems to follow a pattern this algorithm is used 
 `winner := (3 + answer1 - answer2) % 3`

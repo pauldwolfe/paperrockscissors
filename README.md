@@ -46,31 +46,36 @@ func (base *baseUserModel) IncrementScore() {
 `
 
 **Kotlin**
-`Class Person {
+```
+Class Person {
   var username: string
   var score: int
   
   fun IncrmentScore(){
     score++
   }
-}`
+}
+```
 
 ### Interfaces in Go
   In Kotlin you would implement an interface as
-  `class Child : MyInterface {
+  ```
+  Class Child : MyInterface {
     override fun bar() {
         // body
     }
-}`
+  }
+```
 
 In Go you do not implement an interface instead it checks if our struct/class object implements the same functions as the interface and therefore is usuable for things like Dependency Injection. Example
 
-'func DoSomething(val MyInterface) {
+```
+func DoSomething(val MyInterface) {
   ...
 }
 
-DoSomething(structWithSimilarFunctions)'
-
+DoSomething(structWithSimilarFunctions)
+```
 In the last part if the struct has the same functions as implied by the interface it implements the interface. If not you get an error
 
 As they describe it in the Go community: 'if it quacks like a duck and acts like a duck its a duck'

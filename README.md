@@ -1,11 +1,11 @@
 # Paper Rock Scissors Exercise
 
-This project is a Paper Rock Scissors cli game Built in golang.
+This project is a Paper Rock Scissors cli game built in golang.
 
 ## Running the project
 
 Included are binaries for linux, macos and windows.
-To run the game open a terminal/console within the binary of your os and just type out the executable name e.g. ` ./rockpaperscissors.exe` for windows
+To run the game open a terminal/console in the binaries folder with the binary of your os and just type out the executable name e.g. ` ./rockpaperscissors.exe` for windows
 
 **disclaimer** these binaries target amd64 architecture. If you can't run the binary you can follow the steps below to generate your own.
 

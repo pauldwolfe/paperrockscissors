@@ -1,7 +1,7 @@
 package gamelogic
 
 import (
-	maphelper "athmare/rockpaperscissors/helpers"
+	maphelper "athmare/rockpaperscissors/helpers/map"
 	"strings"
 )
 

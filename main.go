@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
+	"athmare/rockpaperscissors/internal/models"
 	gamelogic "athmare/rockpaperscissors/lib"
-	"athmare/rockpaperscissors/models"
 )
 
 func main() {
@@ -30,8 +30,6 @@ username:
 	player := models.NewPlayer(username)
 	bot := models.NewBot()
 	//TODO
-	//validates the gameloop
-	//create unitests
 	// create scala comparisons
 	//create documentation
 	//create binaries
@@ -73,7 +71,7 @@ gameloop:
 			bot.IncrementScore()
 			fmt.Printf("Bot %s wins this round! \n", bot.GetUsername())
 		} else {
-			fmt.Println("No winners its a tie")
+			fmt.Println("No winners this round its a tie")
 		}
 		displayCurrentScore(player, bot)
 	}

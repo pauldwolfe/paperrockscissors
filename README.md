@@ -20,19 +20,21 @@ To run the tests make sure in your terminal/console you are in the tests folder 
 ## The algorithm for calculating the winner
 To calculate the winner which seems to follow a pattern this algorithm is used 
 `winner := (3 + answer1 - answer2) % 3`
-the logic is as follow: <br>
+the logic is as follows: <br>
     Rock=1, Paper=2, Scissors=3 <br>
 	  if 1 answer1 wins <br>
 	  if 2 answer2 wins <br>
 	  if 0 tie <br>
-	  The +3 in the beginning is to prevent a negative value
+	  The +3 in the beginning is to prevent a negative value <br>
+The algorithm is also heavily tested to make sure that it is valid.<br>
 
-You can skip this next part if you already know Go.
+_You can skip this next part if you already know Go._
 
 ## Comparison of Go and Kotlin for clarity
 
 ### Classes
-Go does not have a direct concept of classes instead it uses composition pattern to create lightweight classes.
+Go does not have a direct concept of classes instead it uses composition pattern to create lightweight pseudo classes. <br>
+These two examples are technically the same.
 
 **Go**
 `type baseUserModel struct {

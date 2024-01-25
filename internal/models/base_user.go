@@ -1,8 +1,6 @@
 package models
 
-// interfaces are different in golang, you don't specify the inheritance part
-// on the class/struct but rather implement the same functions as the interface
-// as they describe it: 'if it quacks like a duck and acts like a duck its a duck'
+
 type BaseUserInterface interface {
 	IncrementScore()
 	GetUsername() string
@@ -10,7 +8,7 @@ type BaseUserInterface interface {
 }
 
 // props
-// using lower case makes baseuser private
+// using lower case makes baseUser private
 type baseUserModel struct {
 	username string
 	score    int

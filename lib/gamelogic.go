@@ -1,7 +1,7 @@
 package gamelogic
 
 import (
-	"athmare/rockpaperscissors/helper"
+	maphelper "athmare/rockpaperscissors/helpers"
 	"strings"
 )
 
@@ -26,7 +26,7 @@ func GetIntAnswerValue(answer string) int {
 }
 
 func GetStringAnswerValue(value int) string {
-	key, ok := helper.Mapkey(getConstantMap(), value)
+	key, ok := maphelper.Mapkey(getConstantMap(), value)
 	if !ok {
 		return ""
 	}

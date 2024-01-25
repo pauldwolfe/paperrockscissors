@@ -1,4 +1,4 @@
-package helper
+package maphelper
 
 
 func Mapkey(m map[string]int, value int) (key string, ok bool) {

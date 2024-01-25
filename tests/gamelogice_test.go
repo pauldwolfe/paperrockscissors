@@ -63,8 +63,6 @@ func TestCalculateWinner(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 
 			result := gamelogic.CalculateWinner(tt.answer1, tt.answer2)
-			// Use the new assert.Equal() helper to compare the expected and
-			// actual values.
 			assert.Equal(t, result, tt.want)
 		})
 	}
@@ -97,8 +95,6 @@ func TestGetIntAnswerValue(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 
 			result := gamelogic.GetIntAnswerValue(tt.answer)
-			// Use the new assert.Equal() helper to compare the expected and
-			// actual values.
 			assert.Equal(t, result, tt.want)
 		})
 	}
@@ -135,8 +131,6 @@ func TestGetStringAnswerValue(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 
 			result := gamelogic.GetStringAnswerValue(tt.answer)
-			// Use the new assert.Equal() helper to compare the expected and
-			// actual values.
 			assert.Equal(t, result, tt.want)
 		})
 	}

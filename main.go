@@ -29,11 +29,6 @@ username:
 
 	player := models.NewPlayer(username)
 	bot := models.NewBot()
-	//TODO
-	// create scala comparisons
-	//create documentation
-	//create binaries
-	//commit to github
 
 	//game loop
 	fmt.Printf("Player: %s is going up against computer: %s \n", player.GetUsername(), bot.GetUsername())

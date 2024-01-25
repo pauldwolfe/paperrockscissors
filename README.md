@@ -4,7 +4,7 @@ This project is a Paper Rock Scissors cli game Built in golang.
 
 ## Running the project
 
-Included are binaries for linux macos and windows
+Included are binaries for linux, macos and windows.
 To run the game open a terminal/console within the binary of your os and just type out the executable name e.g. ` ./rockpaperscissors.exe` for windows
 
 **disclaimer** these binaries target amd64 architecture. If you can't run the binary you can follow the steps below to generate your own.
@@ -13,19 +13,19 @@ To run the game open a terminal/console within the binary of your os and just ty
 If you wish to run  or test this project make sure to have the latest version of Go installed.
 https://go.dev/doc/install for more information.
 
-Once you have golang installed and correctly configured, open a terminal/console in the root of the project and type `go run .` this will fire up the project.
+Once you have Go installed and correctly configured, open a terminal/console in the root of the project and type `go run .` this will fire up the project.
 
 To run the tests make sure in your terminal/console you are in the tests folder and type `go test . -v`
 
 ## The algorithm for calculating the winner
 To calculate the winner which seems to follow a pattern this algorithm is used 
 `winner := (3 + answer1 - answer2) % 3`
-the logic is as follow: 
-    Rock=1, Paper=2, Scissors=3
-	  if 1 answer1 wins,
-	  if 2 answer2 wins
-	  if 0 tie
-	  the +3 in the beginning is to prevent a negative value
+the logic is as follow: <br>
+    Rock=1, Paper=2, Scissors=3 <br>
+	  if 1 answer1 wins <br>
+	  if 2 answer2 wins <br>
+	  if 0 tie <br>
+	  The +3 in the beginning is to prevent a negative value
 
 You can skip this next part if you already know Go.
 

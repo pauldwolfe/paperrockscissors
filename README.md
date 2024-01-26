@@ -42,7 +42,8 @@ Go does not have a direct concept of classes instead it uses composition pattern
 These two examples are technically the same.
 
 **Go**
-`type baseUserModel struct {
+```
+type baseUserModel struct {
   username string
 	score    int
 }
@@ -50,7 +51,7 @@ These two examples are technically the same.
 func (base *baseUserModel) IncrementScore() {
 	base.score++
 }
-`
+```
 
 **Kotlin**
 ```
